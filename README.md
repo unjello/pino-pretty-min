@@ -1,3 +1,5 @@
+[![npm version][npm_badge]][npm_link] [![js-standard-style][js_standard_badge]][js_standard_link]
+
 # pino-pretty-min 🕉️
 
 A minimalistic [ndjson](http://ndjson.org) formatter for [pino](https://github.com/pinojs/pino). Theme highly inspired
@@ -26,3 +28,9 @@ npm install pino-pretty-min
 - [pino](https://github.com/pinojs/pino)
 - [pino-colada](https://github.com/lrlna/pino-colada)
 - [logrus](https://github.com/sirupsen/logrus)
+
+
+[npm_badge]: https://img.shields.io/npm/v/pino-pretty-min.svg?style=flat-square
+[npm_link]:  https://npmjs.org/package/pino-pretty-min
+[js_standard_badge]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[js_standard_link]:  https://github.com/feross/standard
