@@ -1,0 +1,31 @@
+{
+  "name": "pino-pretty-min",
+  "version": "0.1.0",
+  "description": "minimalistic ndjson logger for pino",
+  "bin": {
+    "pino-pretty-min": "./bin.js"
+  },
+  "repository": "unjello/pino-pretty-min",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example.js | node ./bin.js",
+    "test": "standard"
+  },
+  "keywords": [
+    "logger",
+    "pretty-printer"
+  ],
+  "author": "Andrzej Lichnerowicz <andrzej@lichnerowicz.pl>",
+  "license": "Unlicense",
+  "devDependencies": {
+    "pino": "^4.11.0",
+    "standard": "^11.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.3.1",
+    "cliui": "^4.0.0",
+    "fast-json-parse": "^1.0.3",
+    "moment": "^2.20.1",
+    "split2": "^2.2.0"
+  }
+}
