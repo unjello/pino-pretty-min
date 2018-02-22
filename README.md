@@ -1,5 +1,5 @@
-[![npm version][npm_badge]][npm_link] [![Build Status][travis_badge]](travis_link) 
-[![downloads][npm_dl_badge]](npm_dl_link) [![js-standard-style][js_standard_badge]][js_standard_link]
+[![npm version][npm_badge]][npm_link] [![Build Status][travis_badge]][travis_link] 
+[![downloads][npm_dl_badge]][npm_dl_link] [![js-standard-style][js_standard_badge]][js_standard_link]
 
 # pino-pretty-min 🕉️
 
