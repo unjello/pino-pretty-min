@@ -38,4 +38,4 @@ npm install pino-pretty-min
 [travis_badge]: https://travis-ci.org/unjello/pino-pretty-min.svg?branch=master
 [travis_link]:  https://travis-ci.org/unjello/pino-pretty-min
 [npm_dl_badge]: http://img.shields.io/npm/dm/pino-pretty-min.svg?style=flat-square
-[npm_dl_link]: [6]: https://npmjs.org/package/pino-pretty-min
+[npm_dl_link]: https://npmjs.org/package/pino-pretty-min
