@@ -3,6 +3,7 @@ dependencies:
   cliui: 4.0.0
   fast-json-parse: 1.0.3
   moment: 2.20.1
+  mri: 1.1.0
   split2: 2.2.0
 devDependencies:
   pino: 4.11.0
@@ -1032,6 +1033,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Yh9y73JRljxW5QxN08Fner68eFLxM5ynNOAw2LbIB1YAGeQzZT8QFSUvkAz609Zf+IHhhaUxqZK8dG3W/+HEvg==
+  /mri/1.1.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-XAo/KcjM/7ux7JQdzsCdcfoy82o=
   /ms/2.0.0:
     dev: true
     resolution:
@@ -1653,6 +1660,7 @@ specifiers:
   cliui: ^4.0.0
   fast-json-parse: ^1.0.3
   moment: ^2.20.1
+  mri: ^1.1.0
   pino: ^4.11.0
   split2: ^2.2.0
   standard: ^11.0.0

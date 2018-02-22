@@ -18,9 +18,9 @@ const numericLabels = {
 }
 
 module.exports = function PinoPrettifierZen () {
-  return split(parse)
+  return (args) => split(line => parse(args, line))
 
-  function parse (line) {
+  function parse (args, line) {
     var obj = jsonParse(line)
     if (!obj.value || obj.err || !obj.value.level) return line + '\n'
 
@@ -28,10 +28,10 @@ module.exports = function PinoPrettifierZen () {
     if (typeof obj.level === 'number') obj.level = numericLabels[obj.level]
     if (!obj.message) obj.message = obj.msg
 
-    return formatOutput(obj)
+    return formatOutput(args, obj)
   }
 
-  function formatOutput (obj) {
+  function formatOutput (args, obj) {
     const noDefaultMetadata = (val) => !['level', 'time', 'msg', 'pid', 'v', 'message', 'hostname'].includes(val)
     const filterOutMetadata = (obj) => Object.keys(obj).filter(noDefaultMetadata).reduce((a, e) => {
       a[e] = obj[e]
@@ -39,10 +39,27 @@ module.exports = function PinoPrettifierZen () {
     }, {})
     const formatLogLevel = (obj) => ({ text: levels[obj.level].color(levels[obj.level].label), width: 4 })
     // TODO: Full timestamp vs. time since start
-    const formatTime = (obj) => ({
+    const formatTimeLong = (obj) => ({
       text: '[' + moment(obj.time).format(moment.HTML5_FMT.TIME_SECONDS) + ']',
       width: 11
     })
+    const pad = (n, s) => `0000000000000${n}`.substr(-s)
+    const formatTimeSince = (() => {
+      let firstTime = true
+      return (obj) => {
+        let previousTime = 0
+        const div = {
+          text: '[' + pad((firstTime ? 0 : obj.time - previousTime), 8) + ']',
+          width: 11
+        }
+        if (firstTime) {
+          firstTime = false
+        }
+        previousTime = obj.time
+        return div
+      }
+    })()
+    const formatTime = (obj) => args.t ? formatTimeSince(obj) : formatTimeLong(obj)
     const formatMessage = (obj) => ({ text: obj.message })
     const formatPropertiesText = (level, obj, parent) => {
       return Object.entries(obj).map(o => {
