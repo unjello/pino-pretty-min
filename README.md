@@ -1,5 +1,5 @@
 [![npm version][npm_badge]][npm_link] [![Build Status][travis_badge]](travis_link) 
-[![js-standard-style][js_standard_badge]][js_standard_link]
+[![downloads][npm_dl_badge]](npm_dl_link) [![js-standard-style][js_standard_badge]][js_standard_link]
 
 # pino-pretty-min 🕉️
 
@@ -37,3 +37,5 @@ npm install pino-pretty-min
 [js_standard_link]:  https://github.com/feross/standard
 [travis_badge]: https://travis-ci.org/unjello/pino-pretty-min.svg?branch=master
 [travis_link]:  https://travis-ci.org/unjello/pino-pretty-min
+[npm_dl_badge]: http://img.shields.io/npm/dm/pino-pretty-min.svg?style=flat-square
+[npm_dl_link]: [6]: https://npmjs.org/package/pino-pretty-min
