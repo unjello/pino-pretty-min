@@ -17,6 +17,8 @@ const numericLabels = {
   10: 'trace', 20: 'debug', 30: 'info', 40: 'warn', 50: 'error', 60: 'fatal'
 }
 
+var firstTime = 0
+
 module.exports = function PinoPrettifierZen () {
   return (args) => split(line => parse(args, line))
 
@@ -44,21 +46,16 @@ module.exports = function PinoPrettifierZen () {
       width: 11
     })
     const pad = (n, s) => `0000000000000${n}`.substr(-s)
-    const formatTimeSince = (() => {
-      let firstTime = true
-      return (obj) => {
-        let previousTime = 0
-        const div = {
-          text: '[' + pad((firstTime ? 0 : obj.time - previousTime), 8) + ']',
-          width: 11
-        }
-        if (firstTime) {
-          firstTime = false
-        }
-        previousTime = obj.time
-        return div
+    const formatTimeSince = (obj) => {
+      const div = {
+        text: '[' + pad((firstTime === 0 ? 0 : obj.time - firstTime), 8) + ']',
+        width: 11
       }
-    })()
+      if (firstTime === 0) {
+        firstTime = obj.time
+      }
+      return div
+    }
     const formatTime = (obj) => args.t ? formatTimeSince(obj) : formatTimeLong(obj)
     const formatMessage = (obj) => ({ text: obj.message })
     const formatPropertiesText = (level, obj, parent) => {
