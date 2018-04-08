@@ -20,8 +20,8 @@ const prettyTransport = through.obj(function (chunk, enc, cb) {
 })
 
 pump(
-  process.stdin, 
-  split(), 
+  process.stdin,
+  split(),
   prettyTransport
 )
 
