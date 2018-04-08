@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 const mri = require('mri')
-const prettify = require('./')()
+const prettify = require('./lib')()
 
 const input = process.stdin
 const output = process.stdout
