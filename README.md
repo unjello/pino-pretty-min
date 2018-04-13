@@ -12,7 +12,7 @@ if not for [pino-colada](https://github.com/lrlna/pino-colada). Props.
 ## Usage
 
 ```bash
-node example.js | pino-pretty-min
+pnpm start
 ```
 
 ## Install

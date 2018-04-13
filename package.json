@@ -8,7 +8,7 @@
   "repository": "unjello/pino-pretty-min",
   "main": "index.js",
   "scripts": {
-    "start": "node example.js | node ./bin.js",
+    "start": "node node_modules/pino/example.js | node ./bin.js",
     "test": "standard"
   },
   "keywords": [
@@ -22,11 +22,13 @@
     "standard": "^11.0.0"
   },
   "dependencies": {
+    "args": "^3.0.8",
     "chalk": "^2.3.1",
     "cliui": "^4.0.0",
     "fast-json-parse": "^1.0.3",
     "moment": "^2.20.1",
-    "mri": "^1.1.0",
-    "split2": "^2.2.0"
+    "pump": "^3.0.0",
+    "split2": "^2.2.0",
+    "through2": "^2.0.3"
   }
 }
