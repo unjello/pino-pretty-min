@@ -11,7 +11,7 @@
     "start": "node node_modules/pino/example.js | node ./bin.js",
     "lint": "standard | snazzy",
     "lint-ci": "standard",
-    "preversion": "npm lint",
+    "preversion": "npm run lint",
     "postversion": "git push && git push --tags"
   },
   "husky": {
