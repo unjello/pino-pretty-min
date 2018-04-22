@@ -9,7 +9,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/pino/example.js | node ./bin.js",
-    "test": "standard"
+    "lint": "standard | snazzy",
+    "lint-ci": "standard",
+    "preversion": "npm lint",
+    "postversion": "git push && git push --tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
   },
   "keywords": [
     "logger",
@@ -18,7 +27,9 @@
   "author": "Andrzej Lichnerowicz <andrzej@lichnerowicz.pl>",
   "license": "Unlicense",
   "devDependencies": {
+    "husky": "^1.0.0-rc.2",
     "pino": "^4.11.0",
+    "snazzy": "^7.1.1",
     "standard": "^11.0.0"
   },
   "dependencies": {
