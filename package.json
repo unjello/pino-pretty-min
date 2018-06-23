@@ -28,6 +28,7 @@
   "license": "Unlicense",
   "devDependencies": {
     "husky": "^1.0.0-rc.2",
+    "jest": "^23.1.0",
     "pino": "^4.11.0",
     "snazzy": "^7.1.1",
     "standard": "^11.0.0"
