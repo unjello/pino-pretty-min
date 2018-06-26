@@ -11,8 +11,14 @@
     "start": "node node_modules/pino/example.js | node ./bin.js",
     "lint": "standard | snazzy",
     "lint-ci": "standard",
+    "test": "jest --env=node --coverage",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   },
   "husky": {
     "hooks": {
