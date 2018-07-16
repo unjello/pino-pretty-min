@@ -1,12 +1,12 @@
 dependencies:
   args: 3.0.8
   chalk: 2.3.1
-  cliui: 4.0.0
   fast-json-parse: 1.0.3
   moment: 2.20.1
   pump: 3.0.0
   split2: 2.2.0
   through2: 2.0.3
+  unicode-string-width: 0.1.0
 devDependencies:
   husky: 1.0.0-rc.2
   jest: 23.1.0
@@ -110,6 +110,7 @@ packages:
     resolution:
       integrity: sha512-UgAb8H9D41AQnu/PbWlCofQVcnV4Gs2bBJi9eZPxfU/hgglFh3SMDMENRIqdr7H6XFnXdoknctFByVsCOotTVw==
   /ansi-regex/2.1.1:
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -702,14 +703,6 @@ packages:
     optional: true
     resolution:
       integrity: sha1-S0dXYP+AJkx2LDoXGQMukcf+oNE=
-  /cliui/4.0.0:
-    dependencies:
-      string-width: 2.1.1
-      strip-ansi: 4.0.0
-      wrap-ansi: 2.1.0
-    dev: false
-    resolution:
-      integrity: sha512-nY3W5Gu2racvdDk//ELReY+dHjb9PlIcVDFXP72nVIhq2Gy3LuVXYwJoPVudwQnv1shtohpgkdCKT2YaKY0CKw==
   /cliui/4.1.0:
     dependencies:
       string-width: 2.1.1
@@ -726,6 +719,7 @@ packages:
     resolution:
       integrity: sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
   /code-point-at/1.1.0:
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -2099,6 +2093,7 @@ packages:
   /is-fullwidth-code-point/1.0.0:
     dependencies:
       number-is-nan: 1.0.1
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -3094,6 +3089,7 @@ packages:
     resolution:
       integrity: sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8=
   /number-is-nan/1.0.1:
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -4184,6 +4180,7 @@ packages:
       code-point-at: 1.1.0
       is-fullwidth-code-point: 1.0.0
       strip-ansi: 3.0.1
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -4192,6 +4189,7 @@ packages:
     dependencies:
       is-fullwidth-code-point: 2.0.0
       strip-ansi: 4.0.0
+    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -4210,6 +4208,7 @@ packages:
   /strip-ansi/3.0.1:
     dependencies:
       ansi-regex: 2.1.1
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -4217,6 +4216,7 @@ packages:
   /strip-ansi/4.0.0:
     dependencies:
       ansi-regex: 3.0.0
+    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -4446,6 +4446,13 @@ packages:
     optional: true
     resolution:
       integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=
+  /unicode-string-width/0.1.0:
+    dependencies:
+      ansi-regex: 3.0.0
+      is-fullwidth-code-point: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha512-b1pDsh2ph0CUWFlIAJYVaMvnUBaMmg3g4eZ5ScxwPack8UsNTsi9jsb56jUFn3aV1rc1m/CEeoWJvBBYSB0dOw==
   /union-value/1.0.0:
     dependencies:
       arr-union: 3.1.0
@@ -4598,6 +4605,7 @@ packages:
     dependencies:
       string-width: 1.0.2
       strip-ansi: 3.0.1
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -4684,7 +4692,6 @@ shrinkwrapVersion: 3
 specifiers:
   args: ^3.0.8
   chalk: ^2.3.1
-  cliui: ^4.0.0
   fast-json-parse: ^1.0.3
   husky: ^1.0.0-rc.2
   jest: ^23.1.0
@@ -4695,3 +4702,4 @@ specifiers:
   split2: ^2.2.0
   standard: ^11.0.0
   through2: ^2.0.3
+  unicode-string-width: ^0.1.0
