@@ -3,6 +3,7 @@ dependencies:
   chalk: 2.3.1
   fast-json-parse: 1.0.3
   moment: 2.20.1
+  pad: 2.1.0
   pump: 3.0.0
   split2: 2.2.0
   through2: 2.0.3
@@ -711,6 +712,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4FG+RSG9DL7uEwRUZXZn3SS34DiDPfzP0VOiEwtUWlE+AR2EIg+hSyvrIgUUfhdgR/UkAeW2QHgeP+hWrXs7jQ==
+  /clone/1.0.4:
+    dev: false
+    engines:
+      node: '>=0.8'
+    resolution:
+      integrity: sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
   /co/4.6.0:
     dev: true
     engines:
@@ -904,6 +911,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-9fj7sYp9bVCyH2QfZJ67Uiz+JPc=
+  /defaults/1.0.3:
+    dependencies:
+      clone: 1.0.4
+    dev: false
+    resolution:
+      integrity: sha1-xlYFHpgX2f8I7YgUd/P+QBnz730=
   /define-properties/1.1.2:
     dependencies:
       foreach: 2.0.5
@@ -3241,6 +3254,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
+  /pad/2.1.0:
+    dependencies:
+      wcwidth: 1.0.1
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-VeCrKYxgIoJ5RBpxogsoDiizLbZ2ZN+9ua+caIxe4e/a64kIzb9eVZ2CwWYd+arPbnM4N81lzlhTsHLtjSKJ0g==
   /parse-glob/3.0.4:
     dependencies:
       glob-base: 0.3.0
@@ -4541,6 +4562,12 @@ packages:
       node: '>=0.1.95'
     resolution:
       integrity: sha1-KAlUdsbffJDJYxOJkMClQj60uYY=
+  /wcwidth/1.0.1:
+    dependencies:
+      defaults: 1.0.3
+    dev: false
+    resolution:
+      integrity: sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   /webidl-conversions/4.0.2:
     dev: true
     resolution:
@@ -4696,6 +4723,7 @@ specifiers:
   husky: ^1.0.0-rc.2
   jest: ^23.1.0
   moment: ^2.20.1
+  pad: ^2.1.0
   pino: ^4.11.0
   pump: ^3.0.0
   snazzy: ^7.1.1
