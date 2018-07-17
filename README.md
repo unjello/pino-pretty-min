@@ -12,8 +12,18 @@ if not for [pino-colada](https://github.com/lrlna/pino-colada). Props.
 
 ## Usage
 
+First, install prettifier as a dev-dependency in your project (works with `npm` and `pnpm`, probably with `yarn` too).
+
 ```bash
-pnpm start
+npm i -D pino-pretty-min
+```
+
+then, pipe your pino-enabled application's output to the prettifier, or even better, make it a npm-script:
+
+```json
+"scripts": {
+  "start": "node ./bin.js | pino-pretty-min",
+}
 ```
 
 ## Install
