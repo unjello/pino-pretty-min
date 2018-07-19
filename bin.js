@@ -8,6 +8,7 @@ const prettyFactory = require('./lib')
 
 args
   .option(['t', 'timeSince'], 'Use time since first log, rather than timestamp')
+  .option(['s', 'stackTrace'], 'Highlight stack traces')
 
 args
   .example('node example.js | pino-pretty-min', 'To prettify logs, simply pipe a log through')
