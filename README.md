@@ -34,7 +34,7 @@ npm install pino-pretty-min
 
 ## License
 
-- Unlicense (~Public Domain)
+- CC0 (~Public Domain)
 
 ## Related Work
 - [pino](https://github.com/pinojs/pino)
