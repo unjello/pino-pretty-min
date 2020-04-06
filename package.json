@@ -33,21 +33,21 @@
   "author": "Andrzej Lichnerowicz <andrzej@lichnerowicz.pl>",
   "license": "Unlicense",
   "devDependencies": {
-    "husky": "^1.0.0-rc.2",
-    "jest": "^23.1.0",
-    "pino": "^4.11.0",
-    "snazzy": "^7.1.1",
-    "standard": "^11.0.0"
+    "husky": "^4.2.3",
+    "jest": "^25.2.7",
+    "pino": "^6.1.1",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.3"
   },
   "dependencies": {
-    "args": "^5.0.0",
-    "chalk": "^2.3.1",
+    "args": "^5.0.1",
+    "chalk": "^4.0.0",
     "fast-json-parse": "^1.0.3",
-    "moment": "^2.20.1",
-    "pad": "^2.1.0",
+    "moment": "^2.24.0",
+    "pad": "^3.2.0",
     "pump": "^3.0.0",
-    "split2": "^2.2.0",
-    "through2": "^2.0.3",
+    "split2": "^3.1.1",
+    "through2": "^3.0.1",
     "unicode-string-width": "^0.1.0"
   }
 }
