@@ -1,7 +1,7 @@
 dependencies:
+  '@hapi/bourne': 2.0.0
   args: 5.0.1
   chalk: 2.4.2
-  fast-json-parse: 1.0.3
   moment: 2.29.1
   pad: 2.3.0
   pump: 3.0.0
@@ -11,7 +11,7 @@ dependencies:
 devDependencies:
   husky: 1.3.1
   jest: 26.6.3
-  pino: 4.17.6
+  pino: 6.11.1
   snazzy: 7.1.1
   standard: 11.0.1
 lockfileVersion: 5.2
@@ -302,6 +302,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-v9kIhKwjeZThiWrLmj0y17CWoyddASLj9O2yvbZkbvw/N3rWOYy9zkV66ursAoVr0mV15bL8g0c4QZUE6cdDoQ==
+  /@hapi/bourne/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-WEezM1FWztfbzqIUbsDzFRVMxSoLy3HugVcux6KDDtTqzPsLE8NDRHfXvev66aH1i2oOKKar3/XDjbvh/OUBdg==
   /@istanbuljs/load-nyc-config/1.1.0:
     dependencies:
       camelcase: 5.3.1
@@ -811,6 +815,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+  /atomic-sleep/1.0.0:
+    dev: true
+    engines:
+      node: '>=8.0.0'
+    resolution:
+      integrity: sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==
   /aws-sign2/0.7.0:
     dev: true
     resolution:
@@ -1909,9 +1919,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
-  /fast-json-parse/1.0.3:
-    resolution:
-      integrity: sha512-FRWsaZRWEJ1ESVNbDWmsAlqDk96gPQezzLghafp5J4GUKjbCz3OkAHuZs5TuPEtkbVQERysLp9xv6c24fBm8Aw==
   /fast-json-stable-stringify/2.1.0:
     dev: true
     resolution:
@@ -1920,10 +1927,16 @@ packages:
     dev: true
     resolution:
       integrity: sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-  /fast-safe-stringify/1.2.3:
+  /fast-redact/3.0.0:
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-a/S/Hp6aoIjx7EmugtzLqXmcNsyFszqbt6qQ99BdG61QjBZF6shNis0BYR6TsZOQ1twYc0FN2Xdhwwbv6+KD0w==
+  /fast-safe-stringify/2.0.7:
     dev: true
     resolution:
-      integrity: sha512-QJYT/i0QYoiZBQ71ivxdyTqkwKkQ0oxACXHYxH2zYHJEgzi2LsbjgvtzTbLi1SZcF190Db2YP7I7eTsU2egOlw==
+      integrity: sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
   /fb-watchman/2.0.1:
     dependencies:
       bser: 2.1.1
@@ -3824,24 +3837,22 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
-  /pino-std-serializers/2.5.0:
+  /pino-std-serializers/3.2.0:
     dev: true
     resolution:
-      integrity: sha512-wXqbqSrIhE58TdrxxlfLwU9eDhrzppQDvGhBEr1gYbzzM4KKo3Y63gSjiDXRKLVS2UOXdPNR2v+KnQgNrs+xUg==
-  /pino/4.17.6:
+      integrity: sha512-EqX4pwDPrt3MuOAAUBMU0Tk5kR/YcCM5fNPEzgCO2zJ5HfX0vbiH9HbJglnyeQsN96Kznae6MWD47pZB5avTrg==
+  /pino/6.11.1:
     dependencies:
-      chalk: 2.4.2
-      fast-json-parse: 1.0.3
-      fast-safe-stringify: 1.2.3
+      fast-redact: 3.0.0
+      fast-safe-stringify: 2.0.7
       flatstr: 1.0.12
-      pino-std-serializers: 2.5.0
-      pump: 3.0.0
-      quick-format-unescaped: 1.1.2
-      split2: 2.2.0
+      pino-std-serializers: 3.2.0
+      quick-format-unescaped: 4.0.1
+      sonic-boom: 1.3.2
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-LFDwmhyWLBnmwO/2UFbWu1jEGVDzaPupaVdx0XcZ3tIAx1EDEBauzxXf2S0UcFK7oe+X9MApjH0hx9U1XMgfCA==
+      integrity: sha512-PoDR/4jCyaP1k2zhuQ4N0NuhaMtei+C9mUHBRRJQujexl/bq3JkeL2OC23ada6Np3zeUMHbO4TGzY2D/rwZX3w==
   /pirates/4.0.1:
     dependencies:
       node-modules-regexp: 1.0.0
@@ -3984,12 +3995,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-dB15eXv3p2jDlbOiNLyMabYg1/sXvppd8DP2J3EOCQ0AkuSXCW2tP7mnVouVLJKgUMY6yP0kcQDVpLCN13h4Xg==
-  /quick-format-unescaped/1.1.2:
-    dependencies:
-      fast-safe-stringify: 1.2.3
+  /quick-format-unescaped/4.0.1:
     dev: true
     resolution:
-      integrity: sha1-DKWB3jF0vs7yWsPC6JVjQjgdtpg=
+      integrity: sha512-RyYpQ6Q5/drsJyOhrWHYMWTedvjTIat+FTwv0K4yoUxzvekw2aRHMQJLlnvt8UantkZg2++bEzD9EdxXqkWf4A==
   /react-is/16.13.1:
     dev: true
     resolution:
@@ -4455,6 +4464,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-gJ46s+jcwOeRhO9uEkTyzcREFZ0c5LZOgcVakLxTPIvhRIywKvbvArvMg5e8bBbpWe4InC/8eyEQOGXgJVNOfw==
+  /sonic-boom/1.3.2:
+    dependencies:
+      atomic-sleep: 1.0.0
+      flatstr: 1.0.12
+    dev: true
+    resolution:
+      integrity: sha512-/B4tAuK2+hIlR94GhhWU1mJHWk5lt0CEuBvG0kvk1qIAzQc4iB1TieMio8DCZxY+Y7tsuzOxSUDOGmaUm3vXMg==
   /source-map-resolve/0.5.3:
     dependencies:
       atob: 2.1.2
@@ -4527,6 +4543,7 @@ packages:
   /split2/2.2.0:
     dependencies:
       through2: 2.0.5
+    dev: false
     resolution:
       integrity: sha512-RAb22TG39LhI31MbreBgIuKiIKhVsawfTgEGqKHTK87aG+ul/PB8Sqoi3I7kVdRWiCfrKxK3uo4/YUkpNvhPbw==
   /sprintf-js/1.0.3:
@@ -4793,6 +4810,7 @@ packages:
     dependencies:
       readable-stream: 2.3.7
       xtend: 4.0.2
+    dev: false
     resolution:
       integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==
   /tmp/0.0.33:
@@ -5198,14 +5216,14 @@ packages:
     resolution:
       integrity: sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==
 specifiers:
+  '@hapi/bourne': ^2.0.0
   args: ^5.0.1
   chalk: ^2.4.2
-  fast-json-parse: ^1.0.3
   husky: ^1.3.1
   jest: ^26.6.3
   moment: ^2.29.1
   pad: ^2.3.0
-  pino: ^4.17.6
+  pino: ^6.11.1
   pump: ^3.0.0
   snazzy: ^7.1.1
   split2: ^2.2.0
