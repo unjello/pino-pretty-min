@@ -1,9 +1,9 @@
 {
   "name": "pino-pretty-min",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "minimalistic ndjson logger for pino",
   "bin": {
-    "pino-pretty-min": "./bin.js"
+    "pino-pretty-min": "bin.js"
   },
   "repository": "unjello/pino-pretty-min",
   "main": "index.js",
