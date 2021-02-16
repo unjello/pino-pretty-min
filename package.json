@@ -1,6 +1,6 @@
 {
   "name": "pino-pretty-min",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "minimalistic ndjson logger for pino",
   "bin": {
     "pino-pretty-min": "bin.js"
