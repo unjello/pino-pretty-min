@@ -42,12 +42,12 @@
   "dependencies": {
     "@hapi/bourne": "^2.0.0",
     "args": "^5.0.1",
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.0",
     "moment": "^2.29.1",
-    "pad": "^2.3.0",
+    "pad": "^3.2.0",
     "pump": "^3.0.0",
-    "split2": "^2.2.0",
-    "through2": "^2.0.5",
+    "split2": "^3.2.0",
+    "through2": "^4.0.2",
     "unicode-string-width": "^0.1.0"
   }
 }
